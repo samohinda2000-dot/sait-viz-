@@ -14,24 +14,16 @@
         <a href="contacts.html" class="button active">Запись на прием</a>
         <a href="news.html" class="button">Новости</a>
     </div>
-
-    <div class="content-box">
-        <h2>Запись на консультацию</h2>
-        <p>Заполните форму ниже. Наш визовый специалист свяжется с вами для подробного разбора вашей ситуации.</p>
-
-        <div class="form-wrapper">
-            <form>
-                <label>Ваше имя:</label>
-                <input type="text" placeholder="Введите ваше имя" required>
-
-                <label>Ваш Email:</label>
-                <input type="email" placeholder="example@mail.ru" required>
-
-                <label>Страна назначения:</label>
-                <input type="text" placeholder="Например: Франция" required>
-
-                <button type="button" onclick="alert('Форма не отправляется на сервер, но всё ок! Ваша заявка сохранена в системе.')" class="submit-btn">Отправить заявку</button>
-            </form>
+                <h2>Запись на консультацию</h2>
+<form>
+    <input type="text" placeholder="Ваше имя" required>
+    <input type="text" placeholder="Номер телефона" required>
+    
+    <button type="button" class="submit-btn" 
+            onclick="alert('Спасибо за заявку! Сейчас вы будете перенаправлены в наш Telegram-канал.'); window.location.href='ССЫЛКА_НА_ВАШ_ТГК';">
+        Записаться
+    </button>
+</form>
         </div>
 
         <div class="contacts-info">

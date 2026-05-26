@@ -1,36 +1,53 @@
-/* Базовый фон сайта (НЕ белый) */
-body { font-family: Arial, sans-serif; background: #f4f6f8; padding: 15px; color: #333; margin: 0; }
-
-/* Белые блоки контента (ЖЕСТКАЯ КОРРЕКЦИЯ РАЗМЕРОВ) */
-.content-box, .form-wrapper, .news-card, .menu { 
-    background: #fff; padding: 25px; margin: 15px auto; border-radius: 8px; 
-    box-sizing: border-box; max-width: 900px; width: 100%; word-wrap: break-word; 
+/* Базовые настройки */
+body { 
+    font-family: 'Segoe UI', Arial, sans-serif; 
+    background-color: #f0f2f5; 
+    margin: 0; padding: 20px 10px; color: #333; 
 }
 
-/* Меню навигации */
-.menu { text-align: center; padding: 10px; }
+/* Общий контейнер сайта */
+.main-wrapper { 
+    max-width: 900px; margin: 0 auto; 
+    background: #fff; border-radius: 12px; 
+    overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+    box-sizing: border-box;
+}
 
-/* Ссылки-кнопки в верхнем меню */
+/* Меню навигации (над баннером) */
+.menu { 
+    text-align: right; padding: 15px 25px; background: #fff; 
+}
 .button { 
-    background: #eef1f4; color: #333; padding: 10px 20px; text-decoration: none; 
-    margin: 5px; display: inline-block; border-radius: 6px; font-weight: bold; transition: 0.2s; 
+    text-decoration: none; color: #333; font-weight: bold;
+    padding: 8px 15px; margin-left: 10px; transition: 0.3s;
 }
-.button:hover, .button.active { background: #ff8562; color: #fff; transform: scale(1.05); }
+.button.active, .button:hover { color: #ff8562; border-bottom: 2px solid #ff8562; }
 
-/* КРУПНЫЕ НИЖНИЕ КНОПКИ (ТЕПЕРЬ ОНИ САМИ СТАНОВЯТСЯ БЕЛЫМИ КАРТОЧКАМИ, ЕСЛИ ВЫПАЛИ ИЗ РАМКИ) */
-.action-btn, .submit-btn { 
-    display: block; background: #ff8562; color: #fff; padding: 14px 28px; text-decoration: none;
-    margin: 20px auto; max-width: 320px; text-align: center; border-radius: 6px; font-weight: bold; 
-    transition: 0.2s; border: none; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+/* ТОТ САМЫЙ ОРАНЖЕВЫЙ БАННЕР (как на главной) */
+.hero-banner { 
+    background-color: #ff8562; 
+    color: white; padding: 60px 40px; 
+    text-align: center; margin: 0;
 }
-.action-btn:hover, .submit-btn:hover { background: #e57352; transform: scale(1.05); }
+.hero-banner h1 { font-size: 48px; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
 
-/* Адаптивность таблиц, картинок и форм */
-table { width: 100%; border-collapse: collapse; margin: 15px 0; display: block; overflow-x: auto; }
-th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
-img { max-width: 100%; height: auto; border-radius: 6px; }
-input { width: 100%; padding: 12px; margin: 10px 0; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
-h1, h2, h3 { color: #ff8562; margin-top: 0; }
+/* Контентная часть */
+.content-area { padding: 40px 30px; line-height: 1.6; }
+.content-area h2 { color: #ff8562; margin-top: 0; }
 
-/* Подвал сайта (зафиксирован строго по центру снизу) */
-footer { text-align: center; padding: 20px; color: #888; clear: both; width: 100%; max-width: 900px; margin: 0 auto; box-sizing: border-box; }
+/* Кнопки перехода внизу */
+.action-btn { 
+    display: block; width: fit-content; margin: 40px auto 10px;
+    background: #ff8562; color: #fff; padding: 15px 30px;
+    text-decoration: none; border-radius: 4px; font-weight: bold;
+    transition: 0.3s; text-align: center;
+}
+.action-btn:hover { transform: scale(1.05); background: #e57352; }
+
+/* Таблицы и списки (защита от вылезания) */
+table { width: 100%; border-collapse: collapse; margin: 20px 0; display: block; overflow-x: auto; }
+td, th { border: 1px solid #eee; padding: 12px; text-align: left; }
+img { max-width: 100%; border-radius: 8px; }
+
+/* Подвал */
+footer { text-align: center; padding: 30px; color: #aaa; font-size: 14px; }
