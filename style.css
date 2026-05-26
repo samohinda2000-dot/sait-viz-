@@ -1,0 +1,36 @@
+/* Базовый фон сайта (НЕ белый) */
+body { font-family: Arial, sans-serif; background: #f4f6f8; padding: 15px; color: #333; margin: 0; }
+
+/* Белые блоки контента (ЖЕСТКАЯ КОРРЕКЦИЯ РАЗМЕРОВ) */
+.content-box, .form-wrapper, .news-card, .menu { 
+    background: #fff; padding: 25px; margin: 15px auto; border-radius: 8px; 
+    box-sizing: border-box; max-width: 900px; width: 100%; word-wrap: break-word; 
+}
+
+/* Меню навигации */
+.menu { text-align: center; padding: 10px; }
+
+/* Ссылки-кнопки в верхнем меню */
+.button { 
+    background: #eef1f4; color: #333; padding: 10px 20px; text-decoration: none; 
+    margin: 5px; display: inline-block; border-radius: 6px; font-weight: bold; transition: 0.2s; 
+}
+.button:hover, .button.active { background: #ff8562; color: #fff; transform: scale(1.05); }
+
+/* КРУПНЫЕ НИЖНИЕ КНОПКИ (ТЕПЕРЬ ОНИ САМИ СТАНОВЯТСЯ БЕЛЫМИ КАРТОЧКАМИ, ЕСЛИ ВЫПАЛИ ИЗ РАМКИ) */
+.action-btn, .submit-btn { 
+    display: block; background: #ff8562; color: #fff; padding: 14px 28px; text-decoration: none;
+    margin: 20px auto; max-width: 320px; text-align: center; border-radius: 6px; font-weight: bold; 
+    transition: 0.2s; border: none; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.action-btn:hover, .submit-btn:hover { background: #e57352; transform: scale(1.05); }
+
+/* Адаптивность таблиц, картинок и форм */
+table { width: 100%; border-collapse: collapse; margin: 15px 0; display: block; overflow-x: auto; }
+th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+img { max-width: 100%; height: auto; border-radius: 6px; }
+input { width: 100%; padding: 12px; margin: 10px 0; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+h1, h2, h3 { color: #ff8562; margin-top: 0; }
+
+/* Подвал сайта (зафиксирован строго по центру снизу) */
+footer { text-align: center; padding: 20px; color: #888; clear: both; width: 100%; max-width: 900px; margin: 0 auto; box-sizing: border-box; }
