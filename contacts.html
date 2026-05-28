@@ -1,43 +1,47 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Визовый Центр — Запись</title>
+    <title>Визовый Эксперт — Запись</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="menu">
-        <a href="index.html" class="button">Главная</a>
-        <a href="catalog.html" class="button">Услуги и Цены</a>
-        <a href="contacts.html" class="button active">Запись на прием</a>
-        <a href="news.html" class="button">Новости</a>
-    </div>
-                <h2>Запись на консультацию</h2>
-<form>
-    <input type="text" placeholder="Ваше имя" required>
-    <input type="text" placeholder="Номер телефона" required>
-    
-    <button type="button" class="submit-btn" 
-            onclick="alert('Спасибо за заявку! Сейчас вы будете перенаправлены в наш Telegram-канал.'); window.location.href='ССЫЛКА_НА_ВАШ_ТГК';">
-        Записаться
-    </button>
-</form>
+    <div class="main-wrapper">
+        <div class="menu">
+            <a href="index.html" class="button">Главная</a>
+            <a href="catalog.html" class="button">Услуги</a>
+            <a href="contacts.html" class="button active">Запись</a>
+            <a href="news.html" class="button">Новости</a>
         </div>
 
-        <div class="contacts-info">
-            <h3>Наш офис</h3>
-            <p><strong>Адрес:</strong> Москва, Деловой Центр, офис 405</p>
-            <p><strong>График работы:</strong> Пн-Пт: с 09:00 до 19:00</p>
+        <div class="hero-banner">
+            <h1>ЗАПИСЬ НА ПРИЕМ</h1>
         </div>
-    </div>
-<div style="text-align: center; margin-top: 30px;">
-    <a href="news.html" class="action-btn" style="text-decoration: none; display: inline-block;">Перейти к новостям визового режима &rarr;</a>
-</div>
-    <footer>
-        <p>&copy; 2026 Визовый Эксперт.</p>
-    </footer>
 
+        <h2>Оставьте вашу заявку</h2>
+        <p>Планируете поездку? Заполните простую форму ниже. Наш ведущий специалист свяжется с вами в течение 15 минут.</p>
+
+        <form>
+            <p>Введите ваше имя:</p>
+            <input type="text" placeholder="Например, Дмитрий">
+            <p>Введите номер телефона:</p>
+            <input type="text" placeholder="+7 (999) 000-00-00">
+            
+            <br>
+            <button type="button" class="submit-btn" onclick="alert('Спасибо! Ваша заявка принята.');">
+                Записаться на консультацию
+            </button>
+        </form>
+
+        <p style="margin-top: 30px;">Наш центральный офис расположен в Деловом Центре, офис 405.</p>
+
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600" alt="Наш офис" class="page-img">
+
+        <div style="margin-top: 30px;">
+            <a href="news.html" class="action-btn">Читать важные новости &rarr;</a>
+        </div>
+
+        <p style="color: #aaa; margin-top: 50px;">© 2026 Визовый Эксперт</p>
+    </div>
 </body>
 </html>

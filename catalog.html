@@ -1,65 +1,59 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Визовый Центр — Услуги и Цены</title>
+    <title>Визовый Эксперт — Услуги</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="main-wrapper">
+        <div class="menu">
+            <a href="index.html" class="button">Главная</a>
+            <a href="catalog.html" class="button active">Услуги</a>
+            <a href="contacts.html" class="button">Запись</a>
+            <a href="news.html" class="button">Новости</a>
+        </div>
 
-    <div class="menu">
-        <a href="index.html" class="button">Главная</a>
-        <a href="catalog.html" class="button active">Услуги и Цены</a>
-        <a href="contacts.html" class="button">Запись на прием</a>
-        <a href="news.html" class="button">Новости</a>
-    </div>
+        <div class="hero-banner">
+            <h1>УСЛУГИ И ЦЕНЫ</h1>
+        </div>
 
-    <div class="content-box">
-        <h2>Стоимость и сроки оформления</h2>
-        <p>Ниже представлена актуальная таблица стоимости наших консалтинговых услуг по подготовке документов для различных направлений:</p>
+        <h2>Актуальный прайс-лист на 2026 год</h2>
+        <p>Ниже представлена подробная таблица со стоимостью наших услуг и официальными сроками рассмотрения документов в консульствах.</p>
 
-        <table class="price-table">
-            <thead>
-                <tr>
-                    <th>Направление</th>
-                    <th>Срок подготовки</th>
-                    <th>Стоимость услуг</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Шенгенская виза (Франция, Италия, Испания)</td>
-                    <td>2-3 рабочих дня</td>
-                    <td>5 000 руб.</td>
-                </tr>
-                <tr>
-                    <td>Виза в США / Великобританию</td>
-                    <td>5-7 рабочих дней</td>
-                    <td>12 000 руб.</td>
-                </tr>
-                <tr>
-                    <td>Электронная виза в Азию (Китай, Индия)</td>
-                    <td>24-48 часов</td>
-                    <td>4 000 руб.</td>
-                </tr>
-            </tbody>
+        <table>
+            <tr>
+                <th>Тип визы и страна</th>
+                <th>Срок оформления</th>
+                <th>Стоимость</th>
+            </tr>
+            <tr>
+                <td>Шенген (Франция, Италия, Испания)</td>
+                <td>10-14 рабочих дней</td>
+                <td>5 500 рублей</td>
+            </tr>
+            <tr>
+                <td>Азия (Китай, Индия)</td>
+                <td>3-5 рабочих дней</td>
+                <td>4 000 рублей</td>
+            </tr>
+            <tr>
+                <td>США и Великобритания</td>
+                <td>от 20 рабочих дней</td>
+                <td>12 000 рублей</td>
+            </tr>
         </table>
 
-        <h2>Базовый список документов для подачи</h2>
-        <ol>
-            <li>Заграничный паспорт, действующий еще минимум 6 месяцев.</li>
-            <li>Две цветные фотографии формата 3.5 х 4.5 см на белом фоне.</li>
-            <li>Справка с текущего места работы с указанием должности и оклада.</li>
-            <li>Выписка с банковского счета о движении средств за последние 3 месяца.</li>
-        </ol>
-    </div>
-<div style="text-align: center; margin-top: 30px;">
-    <a href="contacts.html" class="action-btn" style="text-decoration: none; display: inline-block;">Перейти к записи на прием &rarr;</a>
-</div>
-    <footer>
-        <p>&copy; 2026 Визовый Эксперт.</p>
-    </footer>
+        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=600" alt="Документы на визу" class="page-img">
 
+        <p>В базовую стоимость уже входит: детальный анализ вашей ситуации, заполнение официальной электронной анкеты, бронирование авиабилетов и отелей для подачи.</p>
+
+        <div style="margin-top: 30px;">
+            <a href="contacts.html" class="action-btn">Перейти к записи &rarr;</a>
+            <button onclick="alert('Список документов: Паспорт, 2 фото, справка с работы, выписка из банка.')" class="action-btn" style="background-color: #555;">Что нужно для подачи?</button>
+        </div>
+
+        <p style="color: #aaa; margin-top: 50px;">© 2026 Визовый Эксперт</p>
+    </div>
 </body>
 </html>

@@ -1,53 +1,91 @@
-/* Базовые настройки */
-body { 
-    font-family: 'Segoe UI', Arial, sans-serif; 
-    background-color: #f0f2f5; 
-    margin: 0; padding: 20px 10px; color: #333; 
+/* Основной фон вокруг сайта */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
 }
 
-/* Общий контейнер сайта */
-.main-wrapper { 
-    max-width: 900px; margin: 0 auto; 
-    background: #fff; border-radius: 12px; 
-    overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-    box-sizing: border-box;
+/* Белая рамка контента */
+.main-wrapper {
+    width: 850px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
 }
 
-/* Меню навигации (над баннером) */
-.menu { 
-    text-align: right; padding: 15px 25px; background: #fff; 
+/* Оранжевая плитка заголовка */
+.hero-banner {
+    background-color: #ff8562;
+    color: white;
+    padding: 45px;
+    margin-bottom: 25px;
 }
-.button { 
-    text-decoration: none; color: #333; font-weight: bold;
-    padding: 8px 15px; margin-left: 10px; transition: 0.3s;
+.hero-banner h1 {
+    margin: 0;
+    font-size: 40px;
 }
-.button.active, .button:hover { color: #ff8562; border-bottom: 2px solid #ff8562; }
 
-/* ТОТ САМЫЙ ОРАНЖЕВЫЙ БАННЕР (как на главной) */
-.hero-banner { 
-    background-color: #ff8562; 
-    color: white; padding: 60px 40px; 
-    text-align: center; margin: 0;
+/* Кнопки навигации и действия */
+.button, .action-btn, .submit-btn {
+    background-color: #ff8562;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
 }
-.hero-banner h1 { font-size: 48px; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
 
-/* Контентная часть */
-.content-area { padding: 40px 30px; line-height: 1.6; }
-.content-area h2 { color: #ff8562; margin-top: 0; }
-
-/* Кнопки перехода внизу */
-.action-btn { 
-    display: block; width: fit-content; margin: 40px auto 10px;
-    background: #ff8562; color: #fff; padding: 15px 30px;
-    text-decoration: none; border-radius: 4px; font-weight: bold;
-    transition: 0.3s; text-align: center;
+/* Стили кнопок меню */
+.menu .button {
+    background-color: #eef1f4;
+    color: #333;
 }
-.action-btn:hover { transform: scale(1.05); background: #e57352; }
+.menu .button.active {
+    background-color: #ff8562;
+    color: white;
+}
 
-/* Таблицы и списки (защита от вылезания) */
-table { width: 100%; border-collapse: collapse; margin: 20px 0; display: block; overflow-x: auto; }
-td, th { border: 1px solid #eee; padding: 12px; text-align: left; }
-img { max-width: 100%; border-radius: 8px; }
+/* Таблица цен */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+th {
+    background-color: #f9f9f9;
+}
 
-/* Подвал */
-footer { text-align: center; padding: 30px; color: #aaa; font-size: 14px; }
+/* Поля ввода формы */
+input {
+    width: 350px;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+}
+
+/* Текст */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444;
+}
+
+/* НАСТРОЙКА КАРТИНОК: чтобы красиво стояли по центру и не ломали рамку */
+.page-img {
+    width: 100%;
+    max-width: 550px;     /* Оптимальный размер фотографии на странице */
+    height: auto;
+    margin: 20px auto;
+    border-radius: 8px;   /* Элегантные круглые уголки */
+    display: block;       /* Выравнивание по центру */
+}
