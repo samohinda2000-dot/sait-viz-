@@ -1,39 +1,83 @@
-/* Базовый фон сайта (НЕ белый по методичке) */
-body { font-family: Arial, sans-serif; background: #f4f6f8; padding: 15px; color: #333; margin: 0; text-align: center; }
-
-/* Белые блоки контента (ЗАЩИТА ОТ ВЫЛЕЗАНИЯ НАДПИСЕЙ И КАРТИНОК) */
-.main-wrapper { 
-    background: #fff; padding: 25px; margin: 15px auto; border-radius: 8px; 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    box-sizing: border-box; max-width: 900px; width: 100%; word-wrap: break-word; overflow: hidden; 
+/* 1. Настройки фона и шрифта */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
 }
 
-/* Меню навигации */
-.menu { text-align: center; padding: 10px; margin-bottom: 20px; }
-
-/* Ссылки-кнопки в верхнем меню */
-.button, .action-btn, .submit-btn { 
-    background: #eef1f4; color: #333; padding: 10px 20px; text-decoration: none; 
-    margin: 5px; display: inline-block; border-radius: 6px; font-weight: bold; transition: 0.2s; border: none; cursor: pointer; 
+/* 2. Белая рамка контента сайта */
+.main-wrapper {
+    width: 850px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
 }
-.button:hover, .button.active, .action-btn:hover, .submit-btn:hover { background: #ff8562; color: #fff; transform: scale(1.05); }
 
-/* Крупные нижние кнопки перехода (БЛОЧНЫЕ И СТРОГО ПО ЦЕНТРУ) */
-.action-btn, .submit-btn { display: block; background: #ff8562; color: #fff; margin: 25px auto 5px; max-width: 320px; text-align: center; }
+/* 3. Оранжевый баннер-шапка */
+.hero-banner {
+    background-color: #ff8562;
+    color: white;
+    padding: 45px;
+    margin-bottom: 25px;
+}
+.hero-banner h1 {
+    margin: 0;
+    font-size: 40px;
+}
 
-/* Адаптивность таблиц и форм */
-table { width: 100%; border-collapse: collapse; margin: 15px 0; display: block; overflow-x: auto; }
-th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
-input { width: 100%; padding: 12px; margin: 10px 0; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
-h1, h2, h3 { color: #ff8562; margin-top: 0; }
-footer { text-align: center; padding: 15px; color: #888; }
+/* 4. Общие стили для кнопок */
+.button, .action-btn, .submit-btn {
+    background-color: #ff8562;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
 
-/* ИСПРАВЛЕНИЕ ДЛЯ КАРТИНОК: центрирует и сжимает их, чтобы не ломали рамку */
+/* 5. Кнопки верхнего меню (серые) */
+.menu .button {
+    background-color: #eef1f4;
+    color: #333;
+}
+
+/* 6. Подсветка активной страницы в меню */
+.menu .button.active {
+    background-color: #ff8562;
+    color: white;
+}
+
+/* 7. Оформление таблиц */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+/* 8. Оформление полей ввода */
+input {
+    width: 350px;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+}
+
+/* 9. ЖЕСТКАЯ ФИКСАЦИЯ КАРТИНОК ДЛЯ МОБИЛЬНЫХ ЭКРАНОВ */
 .page-img {
-    width: 100%;          /* Сжимает картинку, чтобы она не была шире текста */
-    max-width: 550px;     /* Оптимальный размер фотографии на странице */
-    height: auto;         /* Пропорции не искажаются */
-    margin: 20px auto;    /* Центровка и отступы сверху/снизу */
-    border-radius: 8px;   /* Элегантные скругленные края */
-    display: block;       /* Выравнивание по центру */
+    width: 300px !important;     /* Картинка ВСЕГДА будет аккуратной ширины 300px */
+    max-width: 100% !important;  /* Защита от вылетов на совсем маленьких экранах */
+    height: auto !important;     /* Сохранение пропорций */
+    margin: 15px auto !important;/* Выравнивание по центру с небольшим отступом */
+    border-radius: 8px;          /* Аккуратные закругленные уголки */
+    display: block !important;   /* Размещение на отдельной строке */
 }
