@@ -1,48 +1,39 @@
-/* 1. Настройки всей страницы: шрифт и серый фон вокруг сайта */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-    margin: 0;
-    padding: 20px;
-    text-align: center; /* Центрирует абсолютно все тексты и кнопки на сайте */
+/* Базовый фон сайта (НЕ белый по методичке) */
+body { font-family: Arial, sans-serif; background: #f4f6f8; padding: 15px; color: #333; margin: 0; text-align: center; }
+
+/* Белые блоки контента (ЗАЩИТА ОТ ВЫЛЕЗАНИЯ НАДПИСЕЙ И КАРТИНОК) */
+.main-wrapper { 
+    background: #fff; padding: 25px; margin: 15px auto; border-radius: 8px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-sizing: border-box; max-width: 900px; width: 100%; word-wrap: break-word; overflow: hidden; 
 }
 
-/* 2. Белая рамка: держит контент всех страниц в одном ровном блоке */
-.main-wrapper {
-    width: 850px;       /* Четкая фиксированная ширина сайта */
-    margin: 0 auto;     /* Магия выравнивания самого белого блока по центру экрана */
-    background-color: white;
-    padding: 30px;
-}
+/* Меню навигации */
+.menu { text-align: center; padding: 10px; margin-bottom: 20px; }
 
-/* 3. Оранжевая шапка: та самая плитка, которая теперь одинаковая на всех слайдах */
-.hero-banner {
-    background-color: #ff8562; /* Наш фирменный оранжевый цвет */
-    color: white;              /* Белый цвет букв для заголовка */
-    padding: 45px;             /* Внутренние отступы, создающие высоту баннера */
-    margin-bottom: 25px;       /* Отступ снизу, чтобы текст не прилипал к шапке */
+/* Ссылки-кнопки в верхнем меню */
+.button, .action-btn, .submit-btn { 
+    background: #eef1f4; color: #333; padding: 10px 20px; text-decoration: none; 
+    margin: 5px; display: inline-block; border-radius: 6px; font-weight: bold; transition: 0.2s; border: none; cursor: pointer; 
 }
+.button:hover, .button.active, .action-btn:hover, .submit-btn:hover { background: #ff8562; color: #fff; transform: scale(1.05); }
 
-/* 4. Общий стиль для ВСЕХ кнопок на сайте (меню и нижние переходы) */
-.button, .action-btn, .submit-btn {
-    background-color: #ff8562;
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;     /* Убирает стандартное синее подчеркивание у ссылок */
-    display: inline-block;     /* Позволяет кнопкам вставать в один ряд и иметь отступы */
-    margin: 10px;
-    font-weight: bold;
-    border: none;              /* Убирает уродливые стандартные рамки кнопок браузера */
-}
+/* Крупные нижние кнопки перехода (БЛОЧНЫЕ И СТРОГО ПО ЦЕНТРУ) */
+.action-btn, .submit-btn { display: block; background: #ff8562; color: #fff; margin: 25px auto 5px; max-width: 320px; text-align: center; }
 
-/* 5. Кнопки в меню: делаем их временно серыми, чтобы они отличались от остальных */
-.menu .button {
-    background-color: #eef1f4;
-    color: #333;
-}
+/* Адаптивность таблиц и форм */
+table { width: 100%; border-collapse: collapse; margin: 15px 0; display: block; overflow-x: auto; }
+th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+input { width: 100%; padding: 12px; margin: 10px 0; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+h1, h2, h3 { color: #ff8562; margin-top: 0; }
+footer { text-align: center; padding: 15px; color: #888; }
 
-/* 6. Активная кнопка: подсвечивает оранжевым цветом пункт меню той страницы, где мы находимся */
-.menu .button.active {
-    background-color: #ff8562;
-    color: white;
+/* ИСПРАВЛЕНИЕ ДЛЯ КАРТИНОК: центрирует и сжимает их, чтобы не ломали рамку */
+.page-img {
+    width: 100%;          /* Сжимает картинку, чтобы она не была шире текста */
+    max-width: 550px;     /* Оптимальный размер фотографии на странице */
+    height: auto;         /* Пропорции не искажаются */
+    margin: 20px auto;    /* Центровка и отступы сверху/снизу */
+    border-radius: 8px;   /* Элегантные скругленные края */
+    display: block;       /* Выравнивание по центру */
 }
