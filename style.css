@@ -1,23 +1,21 @@
-/* 1. Общие настройки отображения */
+/* 1. Общие настр */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f2f5;
     margin: 0;
-    padding: 20px 10px; /* Небольшой отступ по бокам, чтобы удобно листалось на смартфонах */
+    padding: 20px 10px; /* отступ по бокам (телефон) */
     text-align: center;
 }
-
-/* 2. Основной блок-контейнер */
+/* 2. блок-контейнер */
 .main-wrapper {
-    max-width: 850px;   /* Поменяли фиксированную ширину на max-width для идеальной адаптивности */
+    max-width: 850px;   /* фиксированную ширину */
     width: 100%;
     margin: 0 auto;
     background-color: white;
     padding: 30px 20px;
-    box-sizing: border-box; /* Защита от вылетов блоков за пределы экрана */
+    box-sizing: border-box; /* блок предела экрана */
 }
-
-/* 3. Фирменная оранжевая шапка */
+/* 3. оранжевая шапка */
 .hero-banner {
     background-color: #ff8562;
     color: white;
@@ -26,10 +24,9 @@ body {
 }
 .hero-banner h1 {
     margin: 0;
-    font-size: 32px; /* Чуть уменьшили размер, чтобы текст красиво помещался на телефонах */
+    font-size: 32px;
 }
-
-/* 4. Общие стили кнопок */
+/* 4. стили кнопок */
 .button, .action-btn, .submit-btn {
     background-color: #ff8562;
     color: white;
@@ -42,49 +39,44 @@ body {
     cursor: pointer;
     border-radius: 4px;
 }
-
-/* 5. Кнопки верхнего меню */
+/* 5. кнопки верхнего меню */
 .menu .button {
     background-color: #eef1f4;
     color: #333;
 }
-
-/* 6. Активная кнопка меню */
+/* 6. активная кнопка меню */
 .menu .button.active {
     background-color: #ff8562;
     color: white;
 }
-
-/* 7. Оформление прайс-таблиц */
+/* 7. таблица */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 25px 0;
-    font-size: 14px; /* Оптимальный размер для чтения */
+    font-size: 14px;
 }
 th, td {
     border: 1px solid #ddd;
     padding: 10px 8px;
     text-align: left;
 }
-
-/* 8. Поля для ввода данных */
+/* 8. поля для данных */
 input {
     width: 100%;
-    max-width: 350px; /* Поля подстраиваются под мобильный экран, но не становятся огромными на ПК */
+    max-width: 350px; /* уменьш под телефон, но не становятся большими на ПК */
     padding: 12px;
     margin: 8px 0 16px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
-
-/* 9. СТРОГИЙ РАЗМЕР ДЛЯ ВСЕХ ИЗОБРАЖЕНИЙ НА ВСЕХ СТРАНИЦАХ */
+/* 9. размер картинок */
 .page-img {
-    width: 300px !important;     /* Картинка принудительно становится шириной 300px */
-    max-width: 100% !important;  /* Авто-сжатие, если экран мобильного устройства очень узкий */
-    height: auto !important;     /* Сохраняет пропорции, исключая сплющивание */
-    margin: 25px auto !important;/* Создает хорошие отступы сверху и снизу, центрирует элемент */
-    border-radius: 8px;          /* Красивые скругленные края */
-    display: block !important;   /* Выделяет картинке отдельную строчку */
+    width: 300px !important;
+    max-width: 100% !important;  /* для телефона */
+    height: auto !important;     /* сохраняет пропорции */
+    margin: 25px auto !important;/* отступы сверху и снизу */
+    border-radius: 8px;          /* скругленные края */
+    display: block !important;   /* отдельная строчка */
 }
